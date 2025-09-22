@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
@@ -10,14 +11,12 @@ public class TnS_Presentation : MonoBehaviour {
     //private Button m_AtkButton;
 
     [SerializeField]
-    private GameObject priv_HealthBar_go;
+    private HealthBar priv_HealthBar_go;
     [SerializeField]
     private TextMeshProUGUI priv_LevelText_go;
-    [SerializeField]
-    private TextMeshProUGUI priv_AccountName_Text;
+    
 
-
-    public GameObject HealthBarGO
+    public HealthBar HealthBar
     {
         get { return priv_HealthBar_go; }
     }
@@ -27,12 +26,10 @@ public class TnS_Presentation : MonoBehaviour {
     }
 	// Use this for initialization
 	void Start () {
-        //m_AtkButton.onClick.AddListener(delegate { TnS_Globals.Instance.Player.Attack(); }); 
-        
         if(!TnS_GlobalSettings.RELEASE_VERSION)
-            priv_AccountName_Text.text = TnS_Globals.Instance.UE_AccountName;
+            UIEventController.Instance.NameUpdateFunc(TnS_Globals.Instance.UE_AccountName);
         else
-            priv_AccountName_Text.text = "USER";
+            UIEventController.Instance.NameUpdateFunc("USER");
 
     }
 	

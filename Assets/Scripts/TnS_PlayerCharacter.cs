@@ -127,9 +127,7 @@ public class TnS_PlayerCharacter : MonoBehaviour, iDamagable
 
     public void UpdateHealthBar()
     {
-        //FIX THIS
-        TnS_Globals.Instance.Presentation.HealthBarGO.transform.Find("BarFill").GetComponent<Image>().fillAmount = (priv_playerStats.PC_CurrentHealth / priv_playerStats.PC_MaxHealth);
-        TnS_Globals.Instance.Presentation.HealthBarGO.transform.Find("BarValue").GetComponent<TextMeshProUGUI>().text = (priv_playerStats.PC_CurrentHealth + "/" + priv_playerStats.PC_MaxHealth);
+        TnS_Globals.Instance.Presentation.HealthBar.SetData(priv_playerStats.PC_CurrentHealth,priv_playerStats.PC_MaxHealth);
     }
     public void UpdateLevelDisplay()
     {
@@ -137,7 +135,7 @@ public class TnS_PlayerCharacter : MonoBehaviour, iDamagable
     }
     public void TakeDamage(int incDamage)
     {
-
+        priv_playerStats.TakeOrHealDamage(-incDamage);
     }
 
     #region PRIVATE FUNTIONS

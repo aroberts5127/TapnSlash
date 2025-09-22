@@ -13,7 +13,7 @@ public class PlayerInputController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-#if UNITY_EDITOR
+#if UNITY_EDITOR || !UNITY_ANDROID
         if (Input.GetMouseButtonDown(0))
         {
             if (!TnS_Globals.Instance.Player.isAttacking && !TnS_Globals.Instance.CurrentEnemy.Dying)
@@ -22,6 +22,14 @@ public class PlayerInputController : MonoBehaviour
                 StartCoroutine(TnS_Globals.Instance.Player.Attack());
             }
         }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    TnS_Globals.Instance.Player.TakeDamage(81);
+        //}
+        //if (Input.GetKeyDown(KeyCode.Return))
+        //{
+        //    TnS_Globals.Instance.Player.TakeDamage(-181);
+        //}
 #else
         if(Input.touchCount > 0)
         {

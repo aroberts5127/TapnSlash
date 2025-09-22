@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
@@ -15,8 +16,8 @@ public class PlayerStats : MonoBehaviour
     private int priv_CurrentExperience;
     private int priv_ExpToNextLevel;
 
-    
 
+    
 
     public int PC_MaxHealth
     {
@@ -51,6 +52,30 @@ public class PlayerStats : MonoBehaviour
         set { priv_ExpToNextLevel = value; }
     }
 
+    public void TakeOrHealDamage(int healthChange)
+    {
+        priv_CurrentHealth += healthChange;
+        if(priv_CurrentHealth <= priv_MaxHealth * 0.2)
+        {
+            Debug.Log("Here");
+            UIEventController.Instance.LowHealthEventFunc(true);
+        }
+        else
+        {
+            UIEventController.Instance.LowHealthEventFunc(false);
+        }
+        if (priv_CurrentHealth <= 0)
+        {
+            priv_CurrentHealth = 0;
+            //DIE
+        }
+        if(priv_CurrentHealth > priv_MaxHealth)
+        {
+            priv_CurrentHealth = priv_MaxHealth;
+        }
+        UIEventController.Instance.HealthUpdateFunc(priv_CurrentHealth, priv_MaxHealth);
+    }
+
     public void AwardExp(int expAdded)
     {
         CurrentExperience += expAdded;
@@ -74,8 +99,6 @@ public class PlayerStats : MonoBehaviour
             CurrentExperience = 0;
         }
         ExpToNextLevel = (int)(ExpToNextLevel * 1.2f);
-        //Debug.Log("Tns_PlayerCharacter - CurExp: " + priv_playerStats.CurrentExperience);
-        //Debug.Log("TnS_PlayerCharacter - ExpToNext: " + priv_playerStats.ExpToNextLevel);
         TnS_Globals.Instance.Player.UpdateLevelDisplay();
     }
 }

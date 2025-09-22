@@ -78,6 +78,7 @@ public class TnS_Enemy : MonoBehaviour, iDamagable {
     void Start () {
         priv_NameTextObj.text = this.priv_Name;
         EncounterEventController.Instance.playerAttackEvent += TakeDamage;
+        priv_EnemyRevengeValue = 1;
 	}	
 	void Update () {
 		if(priv_EnemyRevengeValue <= TnS_Globals.Instance.GlobalEnemyRevengeValue)
