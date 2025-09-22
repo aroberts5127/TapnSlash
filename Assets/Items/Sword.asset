@@ -3,19 +3,18 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 829d5eeb0406f8d42add387136e17739, type: 3}
+  m_Script: {fileID: 11500000, guid: 176936f26a0b23947bafb9731efa3b57, type: 3}
   m_Name: Sword
   m_EditorClassIdentifier: 
-  name: Sword
-  icon: {fileID: 0}
-  isDefault: 1
   equipSlot: 4
-  priv_EquipmentModel: {fileID: 4300000, guid: b02bf0cf0df74b04abcef9adf7fde9ea, type: 3}
-  priv_EquipmentMaterials: []
-  priv_WeaponAttack: 5
-  priv_ArmorModifier: 1
+  priv_EquipmentModel: {fileID: 4300000, guid: 30e3c1c9dc8cd284cb6759877c8a6f69, type: 3}
+  priv_EquipmentMaterials:
+  - {fileID: 2100000, guid: 2da0af6a45f34ac46b92e518acc978c9, type: 2}
+  priv_WeaponAttack: 2
+  priv_ArmorModifier: 0

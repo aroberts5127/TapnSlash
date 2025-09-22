@@ -2,24 +2,30 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: M_Bull_Cartoon
-  m_Shader: {fileID: 4800000, guid: 996eff9a59cc277418ae29047ece6078, type: 3}
-  m_ShaderKeywords: _EMISSION
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _EMISSION
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: a0f2a53ae9077094abcfa6d241f5cbf9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -66,6 +72,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.55
@@ -75,9 +82,9 @@ Material:
     - _Metallic: 0.942
     - _Mode: 0
     - _OcclusionStrength: 0.569
-    - _Outline: 0.02
+    - _Outline: 0.0138
     - _Parallax: 0.02
-    - _RimPower: 5.9
+    - _RimPower: 5.7
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
@@ -87,3 +94,4 @@ Material:
     - _OutlineColor: {r: 0.253, g: 0.054648004, b: 0.054648004, a: 1}
     - _RimColor: {r: 0.55172414, g: 0.27532518, b: 0.09330628, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+  m_BuildTextureStacks: []
