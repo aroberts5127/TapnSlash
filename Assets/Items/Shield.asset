@@ -3,19 +3,18 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 829d5eeb0406f8d42add387136e17739, type: 3}
+  m_Script: {fileID: 11500000, guid: 176936f26a0b23947bafb9731efa3b57, type: 3}
   m_Name: Shield
   m_EditorClassIdentifier: 
-  name: Shield
-  icon: {fileID: 0}
-  isDefault: 1
   equipSlot: 5
   priv_EquipmentModel: {fileID: 4300000, guid: 4395797ea93ab1b458b198eed174c044, type: 3}
-  priv_EquipmentMaterials: []
+  priv_EquipmentMaterials:
+  - {fileID: 2100000, guid: dc23d6428110dbc499a1611e95537b48, type: 2}
   priv_WeaponAttack: 0
-  priv_ArmorModifier: 3
+  priv_ArmorModifier: 1

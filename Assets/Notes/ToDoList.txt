@@ -9,7 +9,7 @@ navigation to different menus or hubs
 
 
 ================BASE GAME====================.....................................................................................................
-- Generate Enemies - Refactor for April - Most of this needs to be Redone
+- Generate Enemies Most of this needs to be Redone
 	- Deal Damage to them X
 	- They can die X
 	- Reward XP X
@@ -26,7 +26,7 @@ navigation to different menus or hubs
 		= Different Health/Atk/Def
 		= Different Attacks/Patterns
 
-- Player Character Changes - REFACTOR IN APRIL - Most of this needs to be Redone
+- Player Character Changes - Most of this needs to be Redone
 	- Gain XP and Level Up 
 	- Change Equipment
 		= Make Equipment a  thing that exists IP
