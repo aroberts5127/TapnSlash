@@ -11,6 +11,8 @@ public class TnS_Globals : MonoBehaviour {
     private TnS_Presentation priv_Presentation;
     private TnS_Inventory priv_Inventory;
     private TnS_EquipmentManager priv_Equpment;
+    public EquipmentLoader EquipmentLoader;
+    public EnemyLoader EnemyLoader;
 
 #if UNITY_EDITOR //TODO - Move to some kind of test load script
     [HideInInspector]
@@ -21,7 +23,7 @@ public class TnS_Globals : MonoBehaviour {
     private TnS_Enemy priv_CurrentEnemy;
 
     [SerializeField]
-    private List<GameObject> priv_AvailableEnemiesList;
+    private List<int> priv_AvailableEnemiesList;
 
     [SerializeField]
     private Transform priv_EnemySpawnLocation;
@@ -78,7 +80,7 @@ public class TnS_Globals : MonoBehaviour {
         set { priv_CurrentEnemy = value; }
     }
 
-    public List<GameObject> AvailableEnemies
+    public List<int> AvailableEnemies
     {
         get { return priv_AvailableEnemiesList; }
     }
@@ -120,6 +122,9 @@ public class TnS_Globals : MonoBehaviour {
         priv_Presentation = this.GetComponent<TnS_Presentation>();
         priv_Inventory = this.GetComponent<TnS_Inventory>();
         priv_Equpment = this.GetComponent<TnS_EquipmentManager>();
+
+        EquipmentLoader = new EquipmentLoader();
+        EnemyLoader = new EnemyLoader();
     }
 
     // Use this for initialization

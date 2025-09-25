@@ -1,0 +1,111 @@
+{
+  "weapons": [
+    {
+      "id": 1,
+      "data": {
+        "name": "Big Sword",
+        "isDefault": false,
+        "modifiers": {
+          "atk": 1241,
+          "def": 0
+        },
+        "modelName": "WeaponDrop",
+        "modelMaterials": { "mainMat": "ItemTemp 2" }
+      }
+    },
+    {
+      "id": 10,
+      "data": {
+        "name": "Small Sword",
+        "isDefault": false,
+        "modifiers": {
+          "atk": 8,
+          "def": 1
+        },
+        "modelName": "WeaponDrop",
+        "modelMaterials": { "mainMat": "SmallSword_BaseMat" }
+      }
+    },
+    {
+      "id": 11,
+      "data": {
+        "name": "Long Sword",
+        "isDefault": false,
+        "modifiers": {
+          "atk": 13,
+          "def": 1
+        },
+        "modelName": "WeaponDrop",
+        "modelMaterials": { "mainMat": "SmallSword_BaseMat" }
+      }
+    }
+  ],
+  "misc": [
+    {
+      "id": 4,
+      "data": {
+        "name": "Gold",
+        "isDefault": false,
+        "modifiers": {},
+        "modelName": "GoldDrop",
+        "modelMaterials": { "mainMat": "Gold_BaseMat" }
+      }
+    }
+  ],
+  "armor": [
+    {
+      "id": 2,
+      "data": {
+        "name": "Helmet",
+        "isDefault": false,
+        "modifiers": {
+          "atk": 3,
+          "def": 10
+        },
+        "modelName": "ShieldDrop",
+        "modelMaterials": { "mainMat": "Helmet_BaseMat" }
+      }
+    },
+    {
+      "id": 20,
+      "data": {
+        "name": "Leggings",
+        "isDefault": false,
+        "modifiers": {
+          "atk": 0,
+          "def": 5
+        },
+        "modelName": "ShieldDrop",
+        "modelMaterials": { "mainMat": "Leggings_BaseMat" }
+      }
+    }
+  ],
+  "shields": [
+    {
+      "id": 3,
+      "data": {
+        "name": "Buckler",
+        "isDefault": false,
+        "modifiers": {
+          "atk": 5,
+          "def": 10
+        },
+        "modelName": "ShieldDrop",
+        "modelMaterials": { "mainMat": "Buckler_BaseMat" }
+      }
+    },
+    {
+      "id": 30,
+      "data": {
+        "name": "Kite Shield",
+        "isDefault": false,
+        "modifiers": {
+          "atk": 1,
+          "def": 15
+        },
+        "modelName": "ShieldDrop",
+        "modelMaterials": { "mainMat": "KiteShield_BaseMat" }
+      }
+    }
+  ]
+}

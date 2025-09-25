@@ -6,7 +6,7 @@ public class TnS_Inventory : MonoBehaviour {
 
 
     public List<TnS_Item> itemList = new List<TnS_Item>();
-    public List<EquipmentVO> weaponList = new List<EquipmentVO>();
+    public List<EquipmentData> weaponList = new List<EquipmentData>();
     public int Gold = 0;
 
     public void AddItem(TnS_Item item)
@@ -22,17 +22,17 @@ public class TnS_Inventory : MonoBehaviour {
         }
     }
 
-    public void AddWeapon(EquipmentVO weapon)
+    public void AddWeapon(EquipmentData weapon)
     {
-        if (!weapon.isDefault)
-        {
-            int v = weaponList.Count;
-            weaponList.Add(weapon);
-            if (v != weaponList.Count)
-            {
-                Debug.Log("Successfully Added Item");
-            }
-        }
+        //if (!weapon.isDefault)
+        //{
+        //    int v = weaponList.Count;
+        //    weaponList.Add(weapon);
+        //    if (v != weaponList.Count)
+        //    {
+        //        Debug.Log("Successfully Added Item");
+        //    }
+        //}
     }
 
     public void RemoveItem(TnS_Item item)
@@ -45,7 +45,7 @@ public class TnS_Inventory : MonoBehaviour {
         }
     }
 
-    public void RemoveWeapon(EquipmentVO weapon)
+    public void RemoveWeapon(EquipmentData weapon)
     {
         int v = itemList.Count;
         weaponList.Remove(weapon);

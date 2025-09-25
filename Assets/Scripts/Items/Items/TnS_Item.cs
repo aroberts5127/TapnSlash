@@ -5,14 +5,14 @@ using UnityEngine;
 public class TnS_Item
 {
 
-    public ItemVO itemData;
+    public ItemData itemData;
 
     public TnS_Item()
     {
         itemData = null;
     }
 
-    public TnS_Item(ItemVO data)
+    public TnS_Item(ItemData data)
     {
         itemData = data;
     }

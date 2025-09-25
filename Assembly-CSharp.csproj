@@ -63,13 +63,13 @@
     <Compile Include="Assets\Scripts\Items\Items\TnS_Equipment.cs" />
     <Compile Include="Assets\Scripts\TnS_EquipmentManager.cs" />
     <Compile Include="Assets\Scripts\Initialization\SingletonClass.cs" />
-    <Compile Include="Assets\Scripts\Items\Items\Data\ItemVO.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemyData.cs" />
+    <Compile Include="Assets\Scripts\Items\Items\Data\EquipmentData.cs" />
     <Compile Include="Assets\Scripts\Items\Interactable\TnS_WeaponPickup.cs" />
     <Compile Include="Assets\Scripts\PlayerAccount\PlayerAccountInformation.cs" />
     <Compile Include="Assets\Scripts\TnS_Magic.cs" />
     <Compile Include="Assets\Scripts\TnS_Presentation.cs" />
     <Compile Include="Assets\Scripts\TnS_Globals.cs" />
-    <Compile Include="Assets\Scripts\Items\Items\Data\EquipmentVO.cs" />
     <Compile Include="Assets\Scripts\UIControllers\MainMenuController.cs" />
     <Compile Include="Assets\Scripts\UIControllers\UIManager.cs" />
     <Compile Include="Assets\Scripts\Initialization\MainInitialization.cs" />
@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\UIControllers\LowHealthVisualFlash.cs" />
     <Compile Include="Assets\Scripts\Items\Interactable\TnS_ItemPickup.cs" />
     <Compile Include="Assets\Scripts\UIControllers\HealthBar.cs" />
+    <Compile Include="Assets\Scripts\Utilities\EnemyLoader.cs" />
     <Compile Include="Assets\Scripts\OverworldController.cs" />
     <Compile Include="Assets\Scripts\Utilities\EnumUtil.cs" />
     <Compile Include="Assets\Scripts\UIControllers\NameDisplay.cs" />
@@ -89,10 +90,13 @@
     <Compile Include="Assets\Scripts\EventScripts\EncounterEventController.cs" />
     <Compile Include="Assets\IMPORTS\TAZO_3D_C\DemoScene\Action_Manage.cs" />
     <Compile Include="Assets\Scripts\PlayerStats.cs" />
+    <Compile Include="Assets\Scripts\Utilities\DataLoader.cs" />
     <Compile Include="Assets\Scripts\Items\Items\ScriptableObjects\TnS_EquipmentSO.cs" />
     <Compile Include="Assets\Scripts\Items\Items\TnS_Item.cs" />
+    <Compile Include="Assets\Scripts\Utilities\EquipmentLoader.cs" />
     <Compile Include="Assets\Scripts\PlayerInputController.cs" />
     <Compile Include="Assets\Scripts\Items\Interactable\TnS_Interactable.cs" />
+    <Compile Include="Assets\Scripts\Items\Items\Data\ItemData.cs" />
     <Compile Include="Assets\Scripts\Enemies\TnS_Enemy.cs" />
     <Compile Include="Assets\Scripts\Items\Items\ScriptableObjects\TnS_ItemSO.cs" />
     <Compile Include="Assets\Scripts\Enemies\TnS_EnemySpawner.cs" />

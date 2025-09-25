@@ -5,8 +5,8 @@ using UnityEngine;
 public static class TnS_GlobalSettings {
 
     //INFO - Release Information
-    public static bool RELEASE_VERSION = true;
-    public static string RELEASE_VERSION_NO = "0.0.1";
+    public static bool RELEASE_VERSION = false;
+    //public static string RELEASE_VERSION_NO = "0.0.3";
 
     //INFO - PlayerPref String Names
     public static string TNS_FISTTIMELOAD = "TnS_FirstTimeLoad";

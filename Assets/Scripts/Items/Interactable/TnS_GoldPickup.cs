@@ -16,17 +16,17 @@ public class TnS_GoldPickup : TnS_Interactable {
     {
         base.Interact();
         //Debug.Log("INTERACTABLE - Collecting " + goldValue + " Gold");
-        CollectGold(goldValue);
+        CollectGold();
     }
 
-    private void CollectGold(int value)
+    private void CollectGold()
     {
-        TnS_Globals.Instance.Inventory.CollectGold(value);
+        TnS_Globals.Instance.Inventory.CollectGold(goldValue);
     }
 
     private IEnumerator AutoCollect()
     {
-        yield return new WaitForSeconds(3.0f);
+        yield return new WaitForSeconds(3.0f); //Value to be put in a config file somewhere
         Interact();
     }
 

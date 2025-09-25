@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 64342021602509770}
   - component: {fileID: 6323395912040566065}
   m_Layer: 0
-  m_Name: Item 1
+  m_Name: ShieldDrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

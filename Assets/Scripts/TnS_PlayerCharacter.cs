@@ -138,6 +138,11 @@ public class TnS_PlayerCharacter : MonoBehaviour, iDamagable
         priv_playerStats.TakeOrHealDamage(-incDamage);
     }
 
+    public void Heal(int incHeal)
+    {
+        priv_playerStats.TakeOrHealDamage(incHeal);
+    }
+
     #region PRIVATE FUNTIONS
 
 

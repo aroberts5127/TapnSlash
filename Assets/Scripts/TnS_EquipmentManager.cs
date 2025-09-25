@@ -12,17 +12,17 @@ public class TnS_EquipmentManager : MonoBehaviour {
 	void Start () {
 
         
-        currentEquipmentDictionary = new Dictionary<EnumEquipmentSlot, TnS_Equipment>();
-        int numSlots = System.Enum.GetNames(typeof(EnumEquipmentSlot)).Length;
-        for(int i = 0; i < numSlots; i++)
-        {
-            //ReadFromSave Current Equipment <stored in JSON>
-            currentEquipmentDictionary.Add((EnumEquipmentSlot)i, new TnS_Equipment());
-        }
-        foreach(KeyValuePair<EnumEquipmentSlot, TnS_Equipment> kvp in currentEquipmentDictionary)
-        {
-            //Debug.Log(kvp.Key + ", " + kvp.Value.WeaponName);
-        }
-        currentEquipment = new TnS_Equipment[numSlots];
+        //currentEquipmentDictionary = new Dictionary<EnumEquipmentSlot, TnS_Equipment>();
+        //int numSlots = System.Enum.GetNames(typeof(EnumEquipmentSlot)).Length;
+        //for(int i = 0; i < numSlots; i++)
+        //{
+        //    //ReadFromSave Current Equipment <stored in JSON>
+        //    currentEquipmentDictionary.Add((EnumEquipmentSlot)i, new TnS_Equipment());
+        //}
+        //foreach(KeyValuePair<EnumEquipmentSlot, TnS_Equipment> kvp in currentEquipmentDictionary)
+        //{
+        //    //Debug.Log(kvp.Key + ", " + kvp.Value.WeaponName);
+        //}
+        //currentEquipment = new TnS_Equipment[numSlots];
 	}
 }

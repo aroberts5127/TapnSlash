@@ -1,0 +1,58 @@
+{
+  "enemies": [
+    {
+      "id": 1,
+      "data": {
+        "name": "Big Pig",
+        "health": 4,
+        "attack": 1,
+        "defense": 1,
+        "experience": 10,
+        "dropData": {
+          "goldMin": 5,
+          "goldMax": 30,
+          "droppableIDs": {
+            "item1": 1,
+            "item2": 4
+          },
+          "droppableRates": {
+            "item1": 100,
+            "item2": 100
+          }
+        },
+        "revengeValue": 30,
+        "spawnData": {
+          "modelName": "Bull",
+          "materialList": {}
+        }
+      }
+    },
+    {
+      "id": 2,
+      "data": {
+        "name": "Boar Daddy",
+        "health": 4,
+        "attack": 1,
+        "defense": 1,
+        "experience": 10,
+        "dropData": {
+          "goldMin": 5,
+          "goldMax": 30,
+          "droppableIDs": {
+            "item1": 1,
+            "item2": 4
+          },
+          "droppableRates": {
+            "item1": 100,
+            "item2": 100
+          }
+        },
+        "revengeValue": 30,
+        "spawnData": {
+          "modelName": "Bull_02Test",
+          "materialList": {}
+        }
+      }
+    }
+  ]
+}

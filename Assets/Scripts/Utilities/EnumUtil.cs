@@ -14,4 +14,10 @@
         none,
         mainMenu
     }
+
+
+    public enum equipmentModifiers
+    {
+        Attack, Defense
+    }
 }

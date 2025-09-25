@@ -24,8 +24,10 @@ public class TnS_Enemy : MonoBehaviour, iDamagable {
     [SerializeField]
     private TextMesh priv_NameTextObj;
 
+    //[SerializeField]
+    //private List<TnS_Interactable> priv_DroppableItems;
     [SerializeField]
-    private List<TnS_Interactable> priv_DroppableItems;
+    private List<int> priv_DroppableItemsByID;
     [SerializeField]
     private List<float> priv_DroppableItemRates;
     [SerializeField]
@@ -86,6 +88,24 @@ public class TnS_Enemy : MonoBehaviour, iDamagable {
             EnemyAttack();
         }
 	}
+
+    public void SetData(EnemyInfo data)
+    {
+        priv_Name = data.name;
+        priv_NameTextObj.text = priv_Name;
+        priv_Attack = data.attack;
+        priv_Defense = data.defense;
+        priv_Health = data.health;
+        priv_ExperienceReward = data.experience;
+        priv_EnemyRevengeValue = data.revengeValue;
+        for (int i = 0; i < data.dropData.droppableRates.Length; i++)
+        {
+            priv_DroppableItemsByID.Add(data.dropData.droppableIDs[i]);
+            priv_DroppableItemRates.Add((float)data.dropData.droppableRates[i]);
+        }
+        priv_GoldDropValueMin = data.dropData.goldMin;
+        priv_GoldDropValueMax = data.dropData.goldMax;
+    }
     private void EnemyAttack()
     {
         isAttacking = true;
@@ -123,44 +143,32 @@ public class TnS_Enemy : MonoBehaviour, iDamagable {
     public void DropItems()
     {
         //Debug.Log("ENEMY - Dropping Items");
-        for (int i = 0; i < priv_DroppableItems.Count; i++)
+        for (int i = 0; i < priv_DroppableItemsByID.Count; i++)
         {
             if (priv_DroppableItemRates[i] == 100)
             {
-                GenerateItem(priv_DroppableItems[i]);
+                GenerateItem(priv_DroppableItemsByID[i]);
             }
             else
             {
                 float r = UnityEngine.Random.Range(0, 1);
                 if (0 <= r && r <= priv_DroppableItemRates[i] / 100)
                 {
-                    GenerateItem(priv_DroppableItems[i]);
+                    GenerateItem(priv_DroppableItemsByID[i]);
                 }
             }
         }
     }
 
-    private void GenerateItem(TnS_Interactable item)
+    private void GenerateItem(int id)
     {
-        GameObject newItem = Instantiate(item.gameObject, TnS_Globals.Instance.LootSpawn, false);
-        if (item.GetComponent<TnS_GoldPickup>())
+        EquipmentInfo prefab = TnS_Globals.Instance.EquipmentLoader.GetPrefabFromID(id) as EquipmentInfo;
+        GameObject newItem = Instantiate(Resources.Load<GameObject>("DropItemPrefabs/"+prefab.modelName), TnS_Globals.Instance.LootSpawn, false);
+        if (id == 4)
         {
             int goldDropValue = UnityEngine.Random.Range(priv_GoldDropValueMin, priv_GoldDropValueMax);
-            item.GetComponent<TnS_GoldPickup>().goldValue = goldDropValue;
+            newItem.GetComponent<TnS_GoldPickup>().goldValue = goldDropValue;
         }
         newItem.transform.position = TnS_Globals.Instance.LootSpawn.position;
-    }
-}
-
-
-public struct EnemyRewards
-{
-    int Exp;
-    List<TnS_Interactable> loot;
-
-    EnemyRewards(int e, List<TnS_Interactable> l)
-    {
-        Exp = e;
-        loot = l;
     }
 }
