@@ -17,8 +17,8 @@ public class TnS_EnemySpawner : MonoBehaviour
     public void SpawnEnemy()
     {
         int r = Random.Range(0, TnS_Globals.Instance.AvailableEnemies.Count);
-        EnemyInfo prefab = TnS_Globals.Instance.EnemyLoader.GetPrefabFromID(TnS_Globals.Instance.AvailableEnemies[r]) as EnemyInfo;
-        Debug.Log(prefab.spawnData.modelName);
+        EnemyInfo prefab = (EnemyInfo)TnS_Globals.Instance.EnemyLoader.GetPrefabFromID(TnS_Globals.Instance.AvailableEnemies[r]);
+        //Debug.Log(prefab.spawnData.modelName);
         GameObject newEnemy = Instantiate(Resources.Load<GameObject>("EnemyPrefabs/" + prefab.spawnData.modelName));
         newEnemy.transform.position = TnS_Globals.Instance.EnemySpawnLocation.position;
         newEnemy.transform.parent = TnS_Globals.Instance.EnemySpawnParent;

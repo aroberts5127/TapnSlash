@@ -273,10 +273,8 @@ MonoBehaviour:
   priv_Defense: 1
   priv_ExperienceReward: 10
   priv_NameTextObj: {fileID: 102370539791658108}
-  priv_DroppableItemsByID: 0400000001000000
-  priv_DroppableItemRates:
-  - 100
-  - 100
+  priv_DroppableItemsByID: 
+  priv_DroppableItemRates: []
   priv_GoldDropValueMin: 1
   priv_GoldDropValueMax: 20
 --- !u!1 &114116

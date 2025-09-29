@@ -5,20 +5,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class EquipmentData
+public struct EquipmentData
 {
     public int id;
     public EquipmentInfo data;
 }
 
 [Serializable]
-public class EquipmentInfo
+public struct EquipmentInfo
 {
     public string name;
     public bool isDefault;
-    public EquipmentModifier[] modifiers;
+    public EnumEquipmentSlot slot;
+    public EquipmentAttributes baseAttributes;
     public string modelName;
-    public EquipmentMaterials[] modelMaterials;
+    public EquipmentMaterials modelMaterials;
 }
 
 [Serializable]
@@ -32,14 +33,18 @@ public class EquipmentList
 
 
 [Serializable]
-public class EquipmentModifier
+public struct EquipmentAttributes
 {
+    public int minAtk;
+    public int maxAtk;
+    public int minDef;
+    public int maxDef;
     public int atk;
     public int def;
 }
 
 [Serializable]
-public class EquipmentMaterials
+public struct EquipmentMaterials
 {
     public string mainMat;
 }

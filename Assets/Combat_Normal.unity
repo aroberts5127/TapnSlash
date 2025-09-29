@@ -5665,7 +5665,6 @@ GameObject:
   - component: {fileID: 1750296366}
   - component: {fileID: 1750296368}
   - component: {fileID: 1750296369}
-  - component: {fileID: 1750296370}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -5685,7 +5684,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4f691a49e8b48d4883a500f665a26f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priv_WeaponType: 0
   priv_BindToWeapon: {fileID: 0}
   isAttacking: 0
 --- !u!4 &1750296367
@@ -5730,19 +5728,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priv_MaxHealth: 100
   priv_Attack: 2
---- !u!114 &1750296370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1750296365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46482f4b630d25f4b90639cdec09bb4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MagicLevels: 
 --- !u!1 &1775126825
 GameObject:
   m_ObjectHideFlags: 0
@@ -6635,7 +6620,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4745cdded19fc0d40a3b7caf6c777514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentEquipment: []
 --- !u!114 &2056061200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6661,7 +6645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7899f6da00f47d45a90ba60ad479a70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponList: []
+  equipmentList: []
   Gold: 0
 --- !u!114 &2056061202
 MonoBehaviour:

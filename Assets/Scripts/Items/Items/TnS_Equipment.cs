@@ -21,15 +21,14 @@ public class TnS_Equipment : MonoBehaviour {
 
     }
 
-    //public string WeaponName
-    //{
-    //    get { return data.name; }
-    //}
+    public string WeaponName
+    {
+        get { return data.data.name; }
+    }
 
     public void Use()
     {
-        //base.Use();
-        //TnS_Globals.Instance.Equipment.Equip(this);
+        
     }
 }
 

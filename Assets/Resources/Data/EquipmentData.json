@@ -5,8 +5,13 @@
       "data": {
         "name": "Big Sword",
         "isDefault": false,
-        "modifiers": {
-          "atk": 1241,
+        "slot": 4,
+        "baseAttributes": {
+          "minAtk": 1200,
+          "maxAtk": 1250,
+          "minDef": 1,
+          "maxDef": 5,
+          "atk": 0,
           "def": 0
         },
         "modelName": "WeaponDrop",
@@ -18,9 +23,14 @@
       "data": {
         "name": "Small Sword",
         "isDefault": false,
-        "modifiers": {
-          "atk": 8,
-          "def": 1
+        "slot": 4,
+        "baseAttributes": {
+          "minAtk": 1,
+          "maxAtk": 12,
+          "minDef": 1,
+          "maxDef": 3,
+          "atk": 0,
+          "def": 0
         },
         "modelName": "WeaponDrop",
         "modelMaterials": { "mainMat": "SmallSword_BaseMat" }
@@ -31,9 +41,14 @@
       "data": {
         "name": "Long Sword",
         "isDefault": false,
-        "modifiers": {
-          "atk": 13,
-          "def": 1
+        "slot": 4,
+        "baseAttributes": {
+          "minAtk": 1200,
+          "maxAtk": 15,
+          "minDef": 2,
+          "maxDef": 5,
+          "atk": 0,
+          "def": 0
         },
         "modelName": "WeaponDrop",
         "modelMaterials": { "mainMat": "SmallSword_BaseMat" }
@@ -46,7 +61,7 @@
       "data": {
         "name": "Gold",
         "isDefault": false,
-        "modifiers": {},
+        "baseAttributes": {},
         "modelName": "GoldDrop",
         "modelMaterials": { "mainMat": "Gold_BaseMat" }
       }
@@ -58,9 +73,14 @@
       "data": {
         "name": "Helmet",
         "isDefault": false,
-        "modifiers": {
-          "atk": 3,
-          "def": 10
+        "slot": 0,
+        "baseAttributes": {
+          "minAtk": 1,
+          "maxAtk": 3,
+          "minDef": 5,
+          "maxDef": 10,
+          "atk": 0,
+          "def": 0
         },
         "modelName": "ShieldDrop",
         "modelMaterials": { "mainMat": "Helmet_BaseMat" }
@@ -70,10 +90,15 @@
       "id": 20,
       "data": {
         "name": "Leggings",
+        "slot": 2,
         "isDefault": false,
-        "modifiers": {
+        "baseAttributes": {
+          "minAtk": 1,
+          "maxAtk": 3,
+          "minDef": 5,
+          "maxDef": 10,
           "atk": 0,
-          "def": 5
+          "def": 0
         },
         "modelName": "ShieldDrop",
         "modelMaterials": { "mainMat": "Leggings_BaseMat" }
@@ -86,9 +111,14 @@
       "data": {
         "name": "Buckler",
         "isDefault": false,
-        "modifiers": {
-          "atk": 5,
-          "def": 10
+        "slot": 5,
+        "baseAttributes": {
+          "minAtk": 1,
+          "maxAtk": 3,
+          "minDef": 5,
+          "maxDef": 10,
+          "atk": 0,
+          "def": 0
         },
         "modelName": "ShieldDrop",
         "modelMaterials": { "mainMat": "Buckler_BaseMat" }
@@ -99,9 +129,14 @@
       "data": {
         "name": "Kite Shield",
         "isDefault": false,
-        "modifiers": {
-          "atk": 1,
-          "def": 15
+        "slot": 5,
+        "baseAttributes": {
+          "minAtk": 1,
+          "maxAtk": 3,
+          "minDef": 5,
+          "maxDef": 10,
+          "atk": 0,
+          "def": 0
         },
         "modelName": "ShieldDrop",
         "modelMaterials": { "mainMat": "KiteShield_BaseMat" }

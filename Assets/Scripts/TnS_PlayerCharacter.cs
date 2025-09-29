@@ -9,29 +9,16 @@ public enum TnS_WeaponType { NONE, SWaSH, GS}
 
 public class TnS_PlayerCharacter : MonoBehaviour, iDamagable
 {
-
     #region Variables
-
     private PlayerStats priv_playerStats;
 
     #region Private Attributes
-    [SerializeField]
-    private TnS_WeaponType priv_WeaponType;
-
     private TnS_Equipment priv_CurrentWeapon;
 
     [SerializeField]
     private Transform priv_BindToWeapon;
 
-    private float priv_AttackAnimTime;
-
-    public TnS_WeaponType WeaponType
-    {
-        get { return priv_WeaponType; }
-        set { priv_WeaponType = value; }
-    }
-
-    
+    private float priv_AttackAnimTime = 1.0f;
 
     public TnS_Equipment CurrentWeapon
     {
@@ -72,7 +59,7 @@ public class TnS_PlayerCharacter : MonoBehaviour, iDamagable
         //if (PlayerPrefs.HasKey(TnS_GlobalSettings.TNS_FISTTIMELOAD))
         //{
         //Debug.Log("FirstLoad");
-        SetWeapon(TnS_WeaponType.SWaSH);
+        //SetWeapon(TnS_WeaponType.SWaSH);
         priv_playerStats.PC_Level = 1;
         priv_playerStats.PC_CurrentHealth = priv_playerStats.PC_MaxHealth;
         priv_playerStats.ExpToNextLevel = TnS_Globals.Instance.BaseExpToNextLevel;
@@ -80,7 +67,7 @@ public class TnS_PlayerCharacter : MonoBehaviour, iDamagable
         UpdateHealthBar();
         UpdateLevelDisplay();
         //WTF FIX THIS
-        this.GetComponent<TnS_Magic>().InitMagic();
+        //this.GetComponent<TnS_Magic>().InitMagic();
         //}
         //else
         //{
@@ -106,23 +93,6 @@ public class TnS_PlayerCharacter : MonoBehaviour, iDamagable
     public void AwardExp(int incExp)
     {
         priv_playerStats.AwardExp(incExp);
-    }
-
-    public void SetWeapon(TnS_WeaponType weapon)
-    {
-        switch (weapon)
-        {
-            case (TnS_WeaponType.SWaSH):
-                priv_WeaponType = TnS_WeaponType.SWaSH;
-                priv_AttackAnimTime = TnS_Globals.Instance.snsAttackTime;
-                return;
-            case (TnS_WeaponType.GS):
-                priv_WeaponType = TnS_WeaponType.GS;
-                priv_AttackAnimTime = TnS_Globals.Instance.gsAttackTime;
-                return;
-            default:
-                return;
-        }
     }
 
     public void UpdateHealthBar()

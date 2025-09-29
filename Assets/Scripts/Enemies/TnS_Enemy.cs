@@ -162,12 +162,16 @@ public class TnS_Enemy : MonoBehaviour, iDamagable {
 
     private void GenerateItem(int id)
     {
-        EquipmentInfo prefab = TnS_Globals.Instance.EquipmentLoader.GetPrefabFromID(id) as EquipmentInfo;
+        EquipmentInfo prefab = (EquipmentInfo)TnS_Globals.Instance.EquipmentLoader.GetPrefabFromID(id);
         GameObject newItem = Instantiate(Resources.Load<GameObject>("DropItemPrefabs/"+prefab.modelName), TnS_Globals.Instance.LootSpawn, false);
         if (id == 4)
         {
             int goldDropValue = UnityEngine.Random.Range(priv_GoldDropValueMin, priv_GoldDropValueMax);
             newItem.GetComponent<TnS_GoldPickup>().goldValue = goldDropValue;
+        }
+        else //This needs to be segmented differently!!!!
+        {
+            newItem.GetComponent<TnS_WeaponPickup>().SetData(id, prefab);
         }
         newItem.transform.position = TnS_Globals.Instance.LootSpawn.position;
     }

@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using EnumUtil;
 
-public class TnS_EquipmentManager : MonoBehaviour {
+public class TnS_PlayerEquipment : MonoBehaviour {
 
-    public TnS_Equipment[] currentEquipment;
     public Dictionary<EnumEquipmentSlot, TnS_Equipment> currentEquipmentDictionary;
 
 	// Use this for initialization
 	void Start () {
-
-        
-        //currentEquipmentDictionary = new Dictionary<EnumEquipmentSlot, TnS_Equipment>();
+        currentEquipmentDictionary = new Dictionary<EnumEquipmentSlot, TnS_Equipment>();
         //int numSlots = System.Enum.GetNames(typeof(EnumEquipmentSlot)).Length;
         //for(int i = 0; i < numSlots; i++)
         //{
@@ -25,4 +22,6 @@ public class TnS_EquipmentManager : MonoBehaviour {
         //}
         //currentEquipment = new TnS_Equipment[numSlots];
 	}
+
+
 }

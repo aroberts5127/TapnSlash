@@ -11,19 +11,17 @@
         "dropData": {
           "goldMin": 5,
           "goldMax": 30,
-          "droppableIDs": {
-            "item1": 1,
-            "item2": 4
-          },
-          "droppableRates": {
-            "item1": 100,
-            "item2": 100
-          }
+          "droppableIDs": [
+            11,4
+          ],
+          "droppableRates": [
+            100,100
+          ]
         },
         "revengeValue": 30,
         "spawnData": {
           "modelName": "Bull",
-          "materialList": {}
+          "materialList": [ {} ]
         }
       }
     },
@@ -38,19 +36,17 @@
         "dropData": {
           "goldMin": 5,
           "goldMax": 30,
-          "droppableIDs": {
-            "item1": 1,
-            "item2": 4
-          },
-          "droppableRates": {
-            "item1": 100,
-            "item2": 100
-          }
+          "droppableIDs": [
+            1,4
+          ],
+          "droppableRates": [
+            100,100
+          ]
         },
         "revengeValue": 30,
         "spawnData": {
           "modelName": "Bull_02Test",
-          "materialList": {}
+          "materialList": [ {} ]
         }
       }
     }

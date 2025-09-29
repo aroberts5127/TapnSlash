@@ -1,6 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Serialization.Json;
 using UnityEngine;
+using System.IO;
+using System;
+using UnityEditor.SearchService;
+
 
 public class EnemyLoader : DataLoader
 {
@@ -17,10 +22,13 @@ public class EnemyLoader : DataLoader
     {
         base.LoadJSONData();
         EnemyList enemyList = JsonUtility.FromJson<EnemyList>(jsonFile.text);
+        //Debug.Log(enemyList.enemies.Length);
         foreach (EnemyData enemy in enemyList.enemies)
         {
-            Debug.Log(enemy.id);
-            Debug.Log(enemy.data.spawnData.modelName);
+            //Debug.Log(enemy.id);
+            //Debug.Log(enemy.data.spawnData.modelName);
+            Debug.Log(enemy.data.dropData.droppableRates[0].ToString());
+           
             EnemiesById.Add(enemy.id, enemy.data);
         }
     }
@@ -29,7 +37,7 @@ public class EnemyLoader : DataLoader
     {
         //base.GetPrefabFromID(id);
         EnemyInfo enemyInfo = EnemiesById[id];
-        Debug.Log(enemyInfo.spawnData.modelName);
+        //Debug.Log(enemyInfo.spawnData.modelName);
         return enemyInfo;
     }
 }

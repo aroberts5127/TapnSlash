@@ -39,8 +39,8 @@ navigation to different menus or hubs
 	- Have a Global List Of Weapons/Weapon Models X
 	- Create Inventory Class That Holds A List Of Weapons IP
 		=> Temporary
-	- Create XML Document That Holds Weapon Information IP
-		=> XML Document Holds:
+	- Create JSON Document That Holds Weapon Information X
+		=> JSON Document Holds:
 			=> Name/Index of Weapon Model
 			=> Weapon Name
 			=> Weapon Damage

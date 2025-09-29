@@ -1,19 +1,19 @@
-using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Properties;
 using UnityEngine;
-using UnityEngine.Rendering.PostProcessing;
+
 
 [Serializable]
-public class EnemyData
+public struct EnemyData
 {
     public int id;
     public EnemyInfo data;
 }
 
 [Serializable]
-public class EnemyInfo
+public struct EnemyInfo
 {
     public string name;
     public int health;
@@ -26,8 +26,9 @@ public class EnemyInfo
 }
 
 
+
 [Serializable]
-public class EnemyDropData
+public struct EnemyDropData
 {
     public int goldMin;
     public int goldMax;
@@ -35,15 +36,17 @@ public class EnemyDropData
     public int[] droppableRates;
 }
 
+
 [Serializable]
-public class EnemySpawnData
+public struct EnemySpawnData
 {
     public string modelName;
     public string[] materialList;
 }
 
+
 [Serializable]
-public class EnemyList
+public struct EnemyList
 {
     public EnemyData[] enemies;
 }

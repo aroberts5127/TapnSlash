@@ -10,7 +10,7 @@ public class TnS_Globals : MonoBehaviour {
     private TnS_PlayerCharacter priv_Player;
     private TnS_Presentation priv_Presentation;
     private TnS_Inventory priv_Inventory;
-    private TnS_EquipmentManager priv_Equpment;
+    //private TnS_EquipmentManager priv_Equpment;
     public EquipmentLoader EquipmentLoader;
     public EnemyLoader EnemyLoader;
 
@@ -69,10 +69,10 @@ public class TnS_Globals : MonoBehaviour {
     {
         get { return priv_Inventory; }
     }
-    public TnS_EquipmentManager Equipment
-    {
-        get { return priv_Equpment; }
-    }
+    //public TnS_EquipmentManager Equipment
+    //{
+    //    get { return priv_Equpment; }
+    //}
 
     public TnS_Enemy CurrentEnemy
     {
@@ -121,7 +121,7 @@ public class TnS_Globals : MonoBehaviour {
 
         priv_Presentation = this.GetComponent<TnS_Presentation>();
         priv_Inventory = this.GetComponent<TnS_Inventory>();
-        priv_Equpment = this.GetComponent<TnS_EquipmentManager>();
+        //priv_Equpment = this.GetComponent<TnS_EquipmentManager>();
 
         EquipmentLoader = new EquipmentLoader();
         EnemyLoader = new EnemyLoader();

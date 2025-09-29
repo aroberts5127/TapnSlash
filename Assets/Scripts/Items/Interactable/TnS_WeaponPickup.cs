@@ -4,23 +4,25 @@ using UnityEngine;
 
 public class TnS_WeaponPickup : TnS_Interactable {
 
-   // public EquipmentVO weapon;
+    public EquipmentData eData;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    // Create Atk and Def Values from min-max in EquipmentAttributes.
+	public void SetData(int id, EquipmentInfo data)
+    {
+        eData.id = id;
+        data.baseAttributes.atk = Random.Range(data.baseAttributes.minAtk, data.baseAttributes.maxAtk);
+        data.baseAttributes.def = Random.Range(data.baseAttributes.minDef, data.baseAttributes.maxDef);
+        eData.data = data;
+    }
 	
     public override void Interact()
     {
-        base.Interact();
         CollectWeapon();// weapon);
+        base.Interact();     
     }
 
-    private void CollectWeapon()//EquipmentVO weapon)
+    private void CollectWeapon()
     {
-        //Debug.Log("Weapon Name: " + weapon.name);
-        //TODO - Create a Weapon Inventory List to house all the weapons/equipment the Player collects
-        //TODO - Autoassign first collected weapon over default Fist/Stick/Sword
+        TnS_Globals.Instance.Inventory.AddEquipment(eData);
     }
 }

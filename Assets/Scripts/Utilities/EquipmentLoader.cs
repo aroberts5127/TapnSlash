@@ -22,8 +22,9 @@ public class EquipmentLoader : DataLoader
         //Debug.Log(EquipmentDatas.ToString());
         foreach (EquipmentData item in EquipmentDatas.weapons)
         {
-            //Debug.Log(item.id);
-            //Debug.Log(item.data.name);
+            Debug.Log(item.data.slot);
+            //Debug.Log(item.data.baseAttributes.minAtk);
+            //Debug.Log(item.data.baseAttributes.atk);
             EquipmentByIdDict.Add(item.id, item.data);
         }
         foreach (EquipmentData item in EquipmentDatas.misc)

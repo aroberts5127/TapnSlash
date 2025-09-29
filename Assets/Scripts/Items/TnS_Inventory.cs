@@ -4,51 +4,47 @@ using UnityEngine;
 
 public class TnS_Inventory : MonoBehaviour {
 
-
     public List<TnS_Item> itemList = new List<TnS_Item>();
-    public List<EquipmentData> weaponList = new List<EquipmentData>();
+    public Dictionary<int, int> itemDict = new Dictionary<int, int>();
+    public List<EquipmentData> equipmentList = new List<EquipmentData>();
     public int Gold = 0;
 
     public void AddItem(TnS_Item item)
     {
-        if (!item.itemData.isDefault)
+        int count = 1;
+        if (itemDict.ContainsKey(item.itemData.id))
         {
-            int v = itemList.Count;
-            itemList.Add(item);
-            if(v != itemList.Count)
-            {
-                Debug.Log("Successfully Added Item");
-            }
+            count = itemDict[item.itemData.id] + 1;
+            itemDict[item.itemData.id] = count;
+            return;
         }
+        itemDict.Add(item.itemData.id, count);
     }
 
-    public void AddWeapon(EquipmentData weapon)
+    public void AddEquipment(EquipmentData equipment)
     {
-        //if (!weapon.isDefault)
-        //{
-        //    int v = weaponList.Count;
-        //    weaponList.Add(weapon);
-        //    if (v != weaponList.Count)
-        //    {
-        //        Debug.Log("Successfully Added Item");
-        //    }
-        //}
+        EquipmentData d = new EquipmentData();
+        d.id = equipment.id;
+        d.data = equipment.data;
+        equipmentList.Add(d);
     }
 
     public void RemoveItem(TnS_Item item)
     {
-        int v = itemList.Count;
-        itemList.Remove(item);
-        if (v != itemList.Count)
+        if (itemDict[item.itemData.id] > 0)
         {
-            Debug.Log("Successfully Removed Item");
+            itemDict[item.itemData.id] -= 1;
+        }
+        else
+        {
+            Debug.LogError("Somehow using an item with a count of 0");
         }
     }
 
-    public void RemoveWeapon(EquipmentData weapon)
+    public void RemoveEquipment(EquipmentData equipment)
     {
         int v = itemList.Count;
-        weaponList.Remove(weapon);
+        equipmentList.Remove(equipment);
         if (v != itemList.Count)
         {
             Debug.Log("Successfully Removed Item");
