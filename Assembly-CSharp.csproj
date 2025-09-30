@@ -60,6 +60,7 @@
     <Analyzer Include="D:\Unity\2022.3.14f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Modifiers\WeaponModifier.cs" />
     <Compile Include="Assets\Scripts\Items\Items\TnS_Equipment.cs" />
     <Compile Include="Assets\Scripts\TnS_EquipmentManager.cs" />
     <Compile Include="Assets\Scripts\Initialization\SingletonClass.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="Assets\Scripts\TnS_Magic.cs" />
     <Compile Include="Assets\Scripts\TnS_Presentation.cs" />
     <Compile Include="Assets\Scripts\TnS_Globals.cs" />
+    <Compile Include="Assets\Scripts\Modifiers\Modifier.cs" />
     <Compile Include="Assets\Scripts\Interfaces\iEquipable.cs" />
     <Compile Include="Assets\Scripts\UIControllers\MainMenuController.cs" />
     <Compile Include="Assets\Scripts\UIControllers\UIManager.cs" />

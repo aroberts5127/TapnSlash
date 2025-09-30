@@ -20,6 +20,7 @@ public struct EquipmentInfo
     public EquipmentAttributes baseAttributes;
     public string modelName;
     public EquipmentMaterials modelMaterials;
+    public EquipmentModifiers equipmentModifiers;
 }
 
 [Serializable]
@@ -47,4 +48,11 @@ public struct EquipmentAttributes
 public struct EquipmentMaterials
 {
     public string mainMat;
+}
+
+[Serializable]
+public struct EquipmentModifiers
+{
+    public Modifier[] availableModifiers;
+    public Modifier[] appliedModifiers;
 }

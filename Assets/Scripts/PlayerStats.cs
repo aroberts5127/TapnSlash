@@ -2,27 +2,41 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using System.Runtime.CompilerServices;
 
 public class PlayerStats : MonoBehaviour
 {
+    #region Base Stats
     [SerializeField]
     private int priv_MaxHealth;
     [SerializeField]
     private int priv_Attack;
-    
+    [SerializeField]
+    private int priv_Defense;
+    #endregion
 
+    #region Applied Stats
+    [SerializeField]
+    private int _appliedMaxHealth;
+    [SerializeField]
+    private int _appliedAttack;
+    [SerializeField]
+    private int _appliedDefense;
+    #endregion
+
+    #region Misc Stats
     private int priv_CurrentHealth;
     private int priv_Level;
     private int priv_CurrentExperience;
     private int priv_ExpToNextLevel;
+    #endregion
 
 
-    
-
+    #region PUBLIC STAT VARS
     public int PC_MaxHealth
     {
-        get { return priv_MaxHealth; }
-        set { priv_MaxHealth = value; }
+        get { return _appliedMaxHealth; }
+        set { _appliedMaxHealth = value; }
     }
 
     public int PC_CurrentHealth
@@ -30,12 +44,15 @@ public class PlayerStats : MonoBehaviour
         get { return priv_CurrentHealth; }
         set { priv_CurrentHealth = value; }
     }
-
     public int PC_Attack
     {
-        get { return priv_Attack; }
-        set { priv_Attack = value; }
+        get { return _appliedAttack; }
     }
+    public int PC_Defense
+    {
+        get { return _appliedDefense; }
+    }
+
     public int PC_Level
     {
         get { return priv_Level; }
@@ -51,11 +68,12 @@ public class PlayerStats : MonoBehaviour
         get { return priv_ExpToNextLevel; }
         set { priv_ExpToNextLevel = value; }
     }
+    #endregion
 
     public void TakeOrHealDamage(int healthChange)
     {
         priv_CurrentHealth += healthChange;
-        if(priv_CurrentHealth <= priv_MaxHealth * 0.2)
+        if (priv_CurrentHealth <= _appliedMaxHealth * 0.2)
         {
             Debug.Log("Here");
             UIEventController.Instance.LowHealthEventFunc(true);
@@ -69,13 +87,23 @@ public class PlayerStats : MonoBehaviour
             priv_CurrentHealth = 0;
             //DIE
         }
-        if(priv_CurrentHealth > priv_MaxHealth)
+        if(priv_CurrentHealth > _appliedMaxHealth)
         {
-            priv_CurrentHealth = priv_MaxHealth;
+            priv_CurrentHealth = _appliedMaxHealth;
         }
-        UIEventController.Instance.HealthUpdateFunc(priv_CurrentHealth, priv_MaxHealth);
+        UIEventController.Instance.HealthUpdateFunc(priv_CurrentHealth, _appliedMaxHealth);
     }
 
+
+    private void CalculateAppliedStats()
+    {
+        _appliedMaxHealth = priv_MaxHealth;
+    }
+
+
+
+
+    #region LEVEL STUFF
     public void AwardExp(int expAdded)
     {
         CurrentExperience += expAdded;
@@ -100,5 +128,9 @@ public class PlayerStats : MonoBehaviour
         }
         ExpToNextLevel = (int)(ExpToNextLevel * 1.2f);
         TnS_Globals.Instance.Player.UpdateLevelDisplay();
+        //MODIFY BASE STATS
+        //Base Health, Base Attack, Base Defense, ExpToNextLevel
+        //READ IN JSON, GET LEVEL FROM A DICTIONARY WITH LEVEL AS INDEX
     }
+    #endregion
 }

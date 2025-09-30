@@ -33,7 +33,24 @@
           "def": 0
         },
         "modelName": "WeaponDrop",
-        "modelMaterials": { "mainMat": "SmallSword_BaseMat" }
+        "modelMaterials": { "mainMat": "SmallSword_BaseMat" },
+        "equipmentModifiers": {
+          "availableModifiers": [
+            {
+              "modifierID": 1,
+              "modifiedStat": "Attack",
+              "modifiedValue": 20,
+              "modifiedMethod": "Mult"
+            },
+            {
+              "modifierID": 2,
+              "modifiedStat": "Attack",
+              "modifiedValue": 10,
+              "modifiedMethod": "Mult"
+            }
+          ],
+          "appliedModifiers": []
+        }
       }
     },
     {
@@ -43,7 +60,7 @@
         "isDefault": false,
         "slot": 4,
         "baseAttributes": {
-          "minAtk": 1200,
+          "minAtk": 12,
           "maxAtk": 15,
           "minDef": 2,
           "maxDef": 5,

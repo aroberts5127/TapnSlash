@@ -1,0 +1,22 @@
+{
+  "levels": [
+    {
+      "level": 1,
+      "data": {
+        "maxHealth": 10,
+        "attack": 5,
+        "defense": 5,
+        "expToNextLevel": 100
+      }
+    },
+    {
+      "level": 2,
+      "data": {
+        "maxHealth": 15,
+        "attack": 8,
+        "defense": 6,
+        "expToNextLevel": 120
+      }
+    }
+  ]
+}

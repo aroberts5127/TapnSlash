@@ -5728,6 +5728,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priv_MaxHealth: 100
   priv_Attack: 2
+  priv_Defense: 0
+  _appliedMaxHealth: 0
+  _appliedAttack: 0
+  _appliedDefense: 0
 --- !u!1 &1775126825
 GameObject:
   m_ObjectHideFlags: 0
@@ -6530,7 +6534,6 @@ GameObject:
   - component: {fileID: 2056061193}
   - component: {fileID: 2056061195}
   - component: {fileID: 2056061194}
-  - component: {fileID: 2056061197}
   - component: {fileID: 2056061196}
   - component: {fileID: 2056061200}
   - component: {fileID: 2056061201}
@@ -6606,18 +6609,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a9c32dfdf5e2134096ea7919ac3b8ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2056061197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2056061192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4745cdded19fc0d40a3b7caf6c777514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &2056061200
